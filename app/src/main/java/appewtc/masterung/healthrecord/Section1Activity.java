@@ -1,5 +1,6 @@
 package appewtc.masterung.healthrecord;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -119,6 +120,9 @@ public class Section1Activity extends AppCompatActivity {
             weightADouble = Double.parseDouble(weightString);
             widthADouble = Double.parseDouble(widthString);
 
+            //Intent to Result
+            myIntentToResult();
+
         }   // if
 
         String tag = "section11";
@@ -131,6 +135,21 @@ public class Section1Activity extends AppCompatActivity {
         Log.d(tag, "width = " + widthADouble);
 
     }   // clickSection11
+
+    private void myIntentToResult() {
+
+        Intent objIntent = new Intent(Section1Activity.this, ResultOfSection11.class);
+        objIntent.putExtra("Age", ageAnInt);
+        objIntent.putExtra("Sex", sexAnInt);
+        objIntent.putExtra("Pressure", pressureAnInt);
+        objIntent.putExtra("Diatebed", diabetesAnInt);
+        objIntent.putExtra("Height", heightADouble);
+        objIntent.putExtra("Weight", weightADouble);
+        objIntent.putExtra("Width", widthADouble);
+        startActivity(objIntent);
+
+
+    }   // myIntentToResult
 
 
     private void createAgeSpinner() {
