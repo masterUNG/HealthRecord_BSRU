@@ -36,15 +36,17 @@ public class Section1Activity extends AppCompatActivity {
 
     private void createAgeSpinner() {
 
-        String[] choiceStrings = new String[4];
-        choiceStrings[0] = "0 - 39 ปี";
-        choiceStrings[1] = "40 - 44 ปี";
-        choiceStrings[2] = "45 - 49 ปี";
-        choiceStrings[3] = "50 ปี ขึ้นไป";
+        String[] choiceStrings = new String[3];
+
+        choiceStrings[0] = "0 - 44 ปี";
+        choiceStrings[1] = "45 - 49 ปี";
+        choiceStrings[2] = "50 ปี ขึ้นไป";
 
         ArrayAdapter<String> ageAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, choiceStrings);
         ageSpinner.setAdapter(ageAdapter);
+
+
 
     }   // createAgeSpinner
 
