@@ -9,5 +9,20 @@
     <string name="section1_1">ประเมินความเสี่ยง เพื่อป้องกันโรค</string>
     <string name="section1_2">ประเมินความเสี่ยง ในช่วงเวลานั้น</string>
 
+    <string name="age">ช่วงอายุ</string>
+    <string name="sex">เพศ</string>
+    <string name="male">ชาย</string>
+    <string name="female">หญิง</string>
+    <string name="height">ความสูง</string>
+    <string name="meter">เมตร</string>
+    <string name="weight">น้ำหนัก</string>
+    <string name="kilo">กิโลกรัม</string>
+    <string name="width">เส้นรอบเอว</string>
+    <string name="centi">เซ็นติเมตร</string>
+    <string name="presser">ความดัน</string>
+    <string name="dm">บาวหวาน</string>
+    <string name="have">มี</string>
+    <string name="nohave">ไม่มี</string>
+
 
 </resources>
