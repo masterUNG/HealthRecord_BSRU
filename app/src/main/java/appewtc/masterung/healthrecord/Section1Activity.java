@@ -22,7 +22,7 @@ public class Section1Activity extends AppCompatActivity {
     private EditText heightEditText, weightEditText, widthEditText;
     private String sexString, pressureString, diabetesString,
             heightString, weightString, widthString;
-    private int ageAnInt, sexAnInt = 0;
+    private int ageAnInt, sexAnInt = 0, pressureAnInt = 0, diabetesAnInt = 0;
 
 
     @Override
@@ -39,7 +39,47 @@ public class Section1Activity extends AppCompatActivity {
         //Sex Choose
         sexChoose();
 
+        //Pressure Choose
+        pressureChoose();
+
+        //Diabeted Choose
+        diabetesChoose();
+
     }   // Main Method
+
+    private void diabetesChoose() {
+        diabetesRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.radioButton5:
+                        diabetesAnInt = 0;
+                        break;
+                    case R.id.radioButton6:
+                        diabetesAnInt = 4;
+                        break;
+                }
+            }
+        });
+    }
+
+    private void pressureChoose() {
+
+        pressureRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.radioButton3:
+                        pressureAnInt = 0;
+                        break;
+                    case R.id.radioButton4:
+                        pressureAnInt = 2;
+                        break;
+                }
+            }
+        });
+
+    }   // pressureChoose
 
     private void sexChoose() {
 
@@ -64,7 +104,8 @@ public class Section1Activity extends AppCompatActivity {
         String tag = "section11";
         Log.d(tag, "ageAnInt = " + ageAnInt);
         Log.d(tag, "sexAnInt = " + sexAnInt);
-
+        Log.d(tag, "pressureAnInt = " + pressureAnInt);
+        Log.d(tag, "diatebedAnInt = " + diabetesAnInt);
 
     }   // clickSection11
 
