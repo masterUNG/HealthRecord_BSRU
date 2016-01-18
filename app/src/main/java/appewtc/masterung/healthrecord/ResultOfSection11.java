@@ -3,6 +3,7 @@ package appewtc.masterung.healthrecord;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 public class ResultOfSection11 extends AppCompatActivity {
 
@@ -10,13 +11,18 @@ public class ResultOfSection11 extends AppCompatActivity {
     private int ageAnInt, sexAnInt, presureAnInt, diatebedAnInt,
             indexMassAnInt, widthAnInt, sumaryAnInt;
 
-    private Double heightADouble, weightADouble, widthADouble, indexMassADouble;
+    private Double heightADouble, weightADouble,
+            widthADouble, indexMassADouble;
 
+    private TextView riskTextView, introTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_of_section11);
+
+        //Bind Widget
+        bindWidget();
 
         //Receive Value Intent
         receiveValueFromIntent();
@@ -33,6 +39,11 @@ public class ResultOfSection11 extends AppCompatActivity {
         showLog();
 
     }   // Main Method
+
+    private void bindWidget() {
+        riskTextView = (TextView) findViewById(R.id.txtShowRisk);
+        introTextView = (TextView) findViewById(R.id.txtShowIntro);
+    }
 
     private int sumaryHealth() {
 
