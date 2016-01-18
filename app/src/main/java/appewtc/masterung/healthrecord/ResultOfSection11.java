@@ -8,8 +8,10 @@ public class ResultOfSection11 extends AppCompatActivity {
 
     //Explicit
     private int ageAnInt, sexAnInt, presureAnInt, diatebedAnInt,
-            indexMassAnInt, widthAnInt;
+            indexMassAnInt, widthAnInt, sumaryAnInt;
+
     private Double heightADouble, weightADouble, widthADouble, indexMassADouble;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +23,62 @@ public class ResultOfSection11 extends AppCompatActivity {
 
         indexMassAnInt = findIndexMass();
 
+        widthAnInt = findIndexWidth();
+
+        sumaryAnInt = sumaryHealth();
+
+
+
         //Show Log
         showLog();
 
     }   // Main Method
+
+    private int sumaryHealth() {
+
+        int intSumary = 0;
+
+        intSumary = ageAnInt + sexAnInt + indexMassAnInt + widthAnInt + presureAnInt + diatebedAnInt;
+
+        return intSumary;
+    }
+
+    private int findIndexWidth() {
+
+        int intIndex = 0;
+
+        if (sexAnInt == 0) {
+
+            //Male
+            if (widthADouble < 90.0) {
+                intIndex = 0;
+            } else {
+                intIndex = 2;
+            }
+
+
+        } else {
+
+            //Female
+            if (widthADouble <80.0) {
+                intIndex = 0;
+            } else {
+                intIndex = 2;
+            }
+
+        }   // if
+
+
+        return intIndex;
+    }
 
     private void showLog() {
 
         String tag = "Result";
         Log.d(tag, "indexDouble = " + indexMassADouble);
         Log.d(tag, "indexAnInt = " + indexMassAnInt);
+        Log.d(tag, "indexWidth = " + widthAnInt);
+        Log.d(tag, "indexHealth = " + sumaryAnInt);
 
 
     }   // showLog
