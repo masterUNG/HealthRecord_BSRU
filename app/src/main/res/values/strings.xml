@@ -6,5 +6,8 @@
     <string name="section3">โภชนาการ</string>
     <string name="section4">แนะนำแพทย์</string>
 
+    <string name="section1_1">ประเมินความเสี่ยง เพื่อป้องกันโรค</string>
+    <string name="section1_2">ประเมินความเสี่ยง ในช่วงเวลานั้น</string>
+
 
 </resources>
